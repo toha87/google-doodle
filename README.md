@@ -3,3 +3,6 @@ I always liked space in my childhood, I could spend hours looking at the sky and
 
 ## Collage
 [Link for Collage on Figma](https://www.figma.com/file/EJmEOD29qPAxVxkVuaNeND/Google-Doodle?node-id=0%3A1) 
+
+## Resources
+* [Sun icon from iconmonstr](https://iconmonstr.com/weather-2-svg/)
