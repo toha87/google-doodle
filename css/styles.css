@@ -1,6 +1,6 @@
-* {
+/* * {
     outline: 1px dotted black;
-}
+} */
 
 
 /* Doodle Stage */
@@ -11,18 +11,61 @@
 }
 
 #stage {
-    background: #ccc;
+    background: black;
     height: 300px;
     width: 600px;
+    position: relative;
+}
+
+#G {
+    position: absolute;
+    top: 110px;
+    right: 390px;
+    z-index: 1;
+}
+
+#o-red {
+    position: absolute;
+    top: 133px;
+    right: 330px;
+    z-index: 1;
+}
+
+#o-yellow {
+    position: absolute;
+    top: 133px;
+    right: 270px;
+    z-index: 1;
+}
+
+#g {
+    position: absolute;
+    top: 133px;
+    right: 210px;
+    z-index: 1;
+}
+
+#l {
+    position: absolute;
+    top: 115px;
+    right: 180px;
+    z-index: 1;
+}
+
+#e {
+    position: absolute;
+    top: 133px;
+    right: 120px;
+    z-index: 1;
+}
+
+#brown-planet {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    z-index: 1;
 }
 
 main {
     text-align: center;
-}
-
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
 }
