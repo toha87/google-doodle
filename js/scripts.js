@@ -3,10 +3,6 @@ console.log('OK');
 let stageHeight = document.getElementById('stage').offsetHeight;
 let stageWidth = document.getElementById('stage').offsetWidth;
 
-// document.getElementById(`cosmonaut`).style.position = "absolute";
-// document.getElementById(`cosmonaut`).style.top = `${stageHeight-70}px`;
-// document.getElementById(`cosmonaut`).style.right = `${stageWidth-60}px`;
-
 document.getElementById(`rocket`).style.position = "absolute";
 document.getElementById(`rocket`).style.top = `${stageHeight-60}px`;
 document.getElementById(`rocket`).style.right = `${stageWidth-110}px`;
@@ -34,12 +30,17 @@ const interval = setInterval(function() {
 }, 5000);
 
 let timeLineRocket = gsap.timeline();
+let timeLineCosmonaut = gsap.timeline();
 
-timeLineRocket.from("#cosmonaut", {
-    opacity: 0,
-    y: -10,
-    duration: 1
-});
+timeLineCosmonaut.from("#cosmonaut", {
+        opacity: 0,
+        y: -10,
+        duration: 1
+    })
+    .to("#cosmonaut", 2, {
+        x: -340,
+        duration: 2
+    }, "+=3")
 
 timeLineRocket.to("#rocket", 2, {
     x: 100,
@@ -52,7 +53,7 @@ timeLineRocket.to("#rocket", 2, {
     rotationY: 180
 })
 
-timeLineRocket.to(["#rocket", "#cosmonaut"], 2, {
+timeLineRocket.to("#rocket", 2, {
     x: 100,
     y: -220
 })
@@ -60,14 +61,3 @@ timeLineRocket.to(["#rocket", "#cosmonaut"], 2, {
 document.addEventListener("mouseover", () => {
     gsap.to("#brown-planet", .25, { rotationY: 180 })
 });
-
-
-// gsap.to("#cosmonaut", 2, {
-//     x: 200,
-//     y: -200
-// })
-
-// gsap.to("#rocket", 2, {
-//     x: 200,
-//     y: -200
-// })
