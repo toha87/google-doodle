@@ -66,6 +66,13 @@
     z-index: 1;
 }
 
+#brown-planet2 {
+    position: absolute;
+    top: 200px;
+    right: 30px;
+    z-index: 1;
+}
+
 #cosmonaut {
     position: absolute;
     top: 15px;
