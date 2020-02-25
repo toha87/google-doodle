@@ -66,6 +66,20 @@
     z-index: 1;
 }
 
+#cosmonaut {
+    position: absolute;
+    top: 15px;
+    right: 70px;
+    z-index: 2;
+}
+
+#earth {
+    position: absolute;
+    top: 20px;
+    right: 400px;
+    z-index: 1;
+}
+
 main {
     text-align: center;
 }
