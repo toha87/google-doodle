@@ -58,6 +58,12 @@ timeLineRocket.to("#rocket", 2, {
     y: -220
 })
 
+timeLineRocket.to("#rocket", 1, {
+    opacity: 0,
+    x: 100,
+    y: -220
+})
+
 document.addEventListener("mouseover", () => {
     gsap.to("#brown-planet", .25, { rotationY: 180 })
 });
