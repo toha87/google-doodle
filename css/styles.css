@@ -80,6 +80,13 @@
     z-index: 1;
 }
 
+#blue-planet {
+    position: absolute;
+    top: 210px;
+    right: 515px;
+    z-index: 1;
+}
+
 main {
     text-align: center;
 }
