@@ -14,10 +14,8 @@ const positionStars = () => {
 
         gsap.fromTo(`#star-${i}`, { autoAlpha: 0 }, { autoAlpha: 0.5, duration: 3 });
 
-        let starYRandomPosition = Math.floor((Math.random() * 250) + 1);
-        let starXRandomPosition = Math.floor((Math.random() * 500) + 1);
-
-        console.log(starXRandomPosition, starYRandomPosition)
+        let starYRandomPosition = Math.floor((Math.random() * 270) + 1);
+        let starXRandomPosition = Math.floor((Math.random() * 570) + 1);
 
         document.getElementById(`star-${i}`).style.position = "absolute";
         document.getElementById(`star-${i}`).style.top = `${starYRandomPosition}`;
