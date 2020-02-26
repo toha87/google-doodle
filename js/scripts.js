@@ -14,12 +14,14 @@ const positionStars = () => {
 
         gsap.fromTo(`#star-${i}`, { autoAlpha: 0 }, { autoAlpha: 0.5, duration: 3 });
 
-        let starYRandomPosition = Math.floor((Math.random() * stageHeight) + 0);
-        let starXRandomPosition = Math.floor((Math.random() * stageWidth) + 0);
+        let starYRandomPosition = Math.floor((Math.random() * 250) + 1);
+        let starXRandomPosition = Math.floor((Math.random() * 500) + 1);
+
+        console.log(starXRandomPosition, starYRandomPosition)
 
         document.getElementById(`star-${i}`).style.position = "absolute";
-        document.getElementById(`star-${i}`).style.top = `${starYRandomPosition}px`;
-        document.getElementById(`star-${i}`).style.right = `${starXRandomPosition}px`;
+        document.getElementById(`star-${i}`).style.top = `${starYRandomPosition}`;
+        document.getElementById(`star-${i}`).style.right = `${starXRandomPosition}`;
     }
 };
 
@@ -64,6 +66,6 @@ timeLineRocket.to("#rocket", 1, {
     y: -220
 })
 
-document.addEventListener("mouseover", () => {
-    gsap.to("#brown-planet", .25, { rotationY: 180 })
-});
+// document.addEventListener("mouseover", () => {
+//     gsap.to("#brown-planet", .25, { rotationY: 180 })
+// });
