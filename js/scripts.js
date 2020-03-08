@@ -38,7 +38,7 @@ timeLineCosmonaut.from("#cosmonaut", {
         duration: 1
     })
     .to("#cosmonaut", 2, {
-        x: -340,
+        x: -410,
         duration: 2
     }, "+=3")
 
@@ -54,16 +54,12 @@ timeLineRocket.to("#rocket", 2, {
 })
 
 timeLineRocket.to("#rocket", 2, {
-    x: 100,
+    x: 50,
     y: -220
 })
 
 timeLineRocket.to("#rocket", 1, {
     opacity: 0,
-    x: 100,
+    x: 50,
     y: -220
 })
-
-// document.addEventListener("mouseover", () => {
-//     gsap.to("#brown-planet", .25, { rotationY: 180 })
-// });
