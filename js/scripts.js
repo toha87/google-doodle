@@ -17,9 +17,11 @@ const positionStars = () => {
         let starYRandomPosition = Math.floor((Math.random() * 270) + 1);
         let starXRandomPosition = Math.floor((Math.random() * 570) + 1);
 
-        document.getElementById(`star-${i}`).style.position = "absolute";
-        document.getElementById(`star-${i}`).style.top = `${starYRandomPosition}`;
-        document.getElementById(`star-${i}`).style.right = `${starXRandomPosition}`;
+        let star = document.querySelector(`#star-${i}`);
+
+        star.style.position = "absolute";
+        star.style.top = `${starYRandomPosition}`;
+        star.style.right = `${starXRandomPosition}`;
     }
 };
 
