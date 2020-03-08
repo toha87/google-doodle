@@ -1,12 +1,34 @@
 console.log('OK');
 
-let stageHeight = document.getElementById('stage').offsetHeight;
-let stageWidth = document.getElementById('stage').offsetWidth;
+let date = new Date().getHours();
 
-document.getElementById(`rocket`).style.position = "absolute";
-document.getElementById(`rocket`).style.top = `${stageHeight-60}px`;
-document.getElementById(`rocket`).style.right = `${stageWidth-110}px`;
-document.getElementById(`rocket`).style.zIndex = "2";
+if ((24 - date) > 7) {
+    console.log("day")
+    document.querySelector("#stage").style.background = "white";
+} else {
+    console.log("night")
+    document.querySelector("#stage").style.background = "black"
+}
+
+const switchTime = () => {
+    if (document.querySelector("#stage").style.background === "white") {
+        document.querySelector("#stage").style.background = "black"
+        document.querySelector("#sun").style.display = "none"
+    } else {
+        document.querySelector("#stage").style.background = "white";
+        document.querySelector("#sun").style.display = "inline"
+    }
+}
+
+let stageHeight = document.querySelector("#stage").offsetHeight;
+let stageWidth = document.querySelector("#stage").offsetWidth;
+
+let rocket = document.querySelector("#rocket");
+
+rocket.style.position = "absolute";
+rocket.style.top = `${stageHeight-60}px`;
+rocket.style.right = `${stageWidth-110}px`;
+rocket.style.zIndex = "2";
 
 const positionStars = () => {
     let i;
