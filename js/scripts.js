@@ -2,21 +2,29 @@ console.log('OK');
 
 let date = new Date().getHours();
 
+const nightMode = () => {
+    document.querySelector("#stage").style.background = "black"
+    document.querySelector("#sun").style.display = "none"
+};
+
+const dayMode = () => {
+    document.querySelector("#stage").style.background = "white";
+    document.querySelector("#sun").style.display = "inline"
+};
+
 if ((24 - date) > 7) {
     console.log("day")
-    document.querySelector("#stage").style.background = "white";
+    dayMode();
 } else {
     console.log("night")
-    document.querySelector("#stage").style.background = "black"
+    nightMode();
 }
 
 const switchTime = () => {
     if (document.querySelector("#stage").style.background === "white") {
-        document.querySelector("#stage").style.background = "black"
-        document.querySelector("#sun").style.display = "none"
+        nightMode();
     } else {
-        document.querySelector("#stage").style.background = "white";
-        document.querySelector("#sun").style.display = "inline"
+        dayMode();
     }
 }
 
